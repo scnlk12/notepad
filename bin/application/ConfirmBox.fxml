@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="171.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.confirmBoxController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="20.0" prefHeight="138.0" prefWidth="333.0">
+         <top>
+            <Label fx:id="label" prefHeight="87.0" prefWidth="305.0" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <GridPane prefHeight="29.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="15.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="113.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="133.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="10.0" prefWidth="72.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonPushed" prefHeight="36.0" prefWidth="96.0" text="保存(S)" GridPane.columnIndex="1" />
+                  <Button fx:id="nonSaveButton" mnemonicParsing="false" onAction="#nonSaveButtonPushed" prefHeight="36.0" prefWidth="114.0" text="不保存(N)" GridPane.columnIndex="2" />
+                  <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButtonPushed" prefHeight="36.0" prefWidth="67.0" text="取消" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

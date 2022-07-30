@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections ?>
+
+<AnchorPane prefHeight="492.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fontController">
+   <children>
+      <BorderPane layoutX="17.0" layoutY="23.0" prefHeight="196.0" prefWidth="482.0">
+         <center>
+            <GridPane hgap="10.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="183.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="142.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="149.0" minHeight="6.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="217.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="字体(F):" />
+                  <Label text="字形(Y):" GridPane.columnIndex="1" />
+                  <Label text="大小(S):" GridPane.columnIndex="2" />
+                  <TextField fx:id="textfield1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textfield2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textfield3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ListView fx:id="listview1" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                  <ListView fx:id="listview2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ListView fx:id="listview3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+      <Label fx:id="label" alignment="CENTER" layoutX="226.0" layoutY="240.0" prefHeight="90.0" prefWidth="274.0" style="-fx-border-style: solid;" text="AaBbYyZz" />
+      <Label layoutX="237.0" layoutY="228.0" prefHeight="28.0" prefWidth="55.0" style="-fx-background-color: #F5F5F5;" text="   示例" />
+      <Label layoutX="246.0" layoutY="350.0" text="脚本(R):" />
+      <ComboBox fx:id="combobox" layoutX="226.0" layoutY="374.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white;" />
+      <GridPane layoutX="246.0" layoutY="426.0" prefHeight="36.0" prefWidth="250.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="confirmbutton" mnemonicParsing="false" onAction="#onConfirmButtonClicked" prefHeight="36.0" prefWidth="111.0" text="确定" />
+            <Button fx:id="quitbutton" mnemonicParsing="false" onAction="#onQuitButtonClicked" prefHeight="36.0" prefWidth="111.0" text="取消" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

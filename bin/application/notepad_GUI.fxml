@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.notepadController">
+   <children>
+      <BorderPane prefHeight="381.0" prefWidth="454.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="文件(F)">
+                  <items>
+                    <MenuItem fx:id="newMenu" mnemonicParsing="false" onAction="#newMenuClicked" text="新建(N)" />
+                        <MenuItem fx:id="newWindowMenu" mnemonicParsing="false" onAction="#newWindowMenuClicked" text="新窗口(W)" />
+                        <MenuItem fx:id="openMenu" mnemonicParsing="false" onAction="#openMenuClicked" text="打开(O)" />
+                        <MenuItem fx:id="saveMenu" mnemonicParsing="false" onAction="#saveMenuClicked" text="保存(S)" />
+                        <MenuItem fx:id="saveAsMenu" mnemonicParsing="false" onAction="#saveAsMenuClicked" text="另存为(A)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="exitMenu" mnemonicParsing="false" onAction="#exitMenuClicked" text="退出(X)" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="编辑(E)">
+                  <items>
+                    <MenuItem fx:id="revokeMenu" mnemonicParsing="false" onAction="#revokeMenuClicked" text="撤销/重做(U)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="shearMenu" mnemonicParsing="false" onAction="#shearMenuClicked" text="剪切(T)" />
+                        <MenuItem fx:id="copyMenu" mnemonicParsing="false" onAction="#copyMenuClicked" text="复制(C)" />
+                        <MenuItem fx:id="pasteMenu" mnemonicParsing="false" onAction="#pasteMenuClicked" text="粘贴(P)" />
+                        <MenuItem fx:id="deleteMenu" mnemonicParsing="false" onAction="#deleteMenuClicked" text="删除(L)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="seekMenu" mnemonicParsing="false" onAction="#seekMenuClicked" text="查找(F)" />
+                        <MenuItem fx:id="seekNextMenu" mnemonicParsing="false" onAction="#seekNextMenuClicked" text="查找下一个(N)" />
+                        <MenuItem fx:id="seekLastMenu" mnemonicParsing="false" onAction="#seekLastMenuClicked" text="查找上一个(V)" />
+                        <MenuItem fx:id="replaceMenu" mnemonicParsing="false" onAction="#replaceMenuClicked" text="替换(R)" />
+                        <MenuItem fx:id="goToMenu" mnemonicParsing="false" onAction="#gotoMenuClicked" text="转到(G)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="selectAllMenu" mnemonicParsing="false" onAction="#selectAllMenuClicked" text="全选(A)" />
+                        <MenuItem fx:id="dateMenu" mnemonicParsing="false" onAction="#dateMenuClicked" text="时间/日期(D)" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="格式(O)">
+                  <items>
+                        <RadioMenuItem fx:id="wrapMenu" mnemonicParsing="false" onAction="#wrapMenuClicked" selected="true" text="自动换行(W)" />
+                        <MenuItem fx:id="fontMenu" mnemonicParsing="false" onAction="#fontMenuClicked" text="字体(F)" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="查看(V)">
+                    <items>
+                        <Menu fx:id="scaleMenu" mnemonicParsing="false" text="缩放(Z)">
+                          <items>
+                              <MenuItem fx:id="enlargeMenu" mnemonicParsing="false" onAction="#onEnlargeMenuSelected" text="放大(I)" />
+                              <MenuItem fx:id="narrowMenu" mnemonicParsing="false" onAction="#onNarrowMenuSelected" text="缩小(O)" />
+                            <MenuItem fx:id="recoverMenu" mnemonicParsing="false" onAction="#onRecoverMenuSelected" text="恢复默认缩放" />
+                          </items>
+                        </Menu>
+                        <RadioMenuItem fx:id="stateMenu" mnemonicParsing="false" onAction="#stateMenuClicked" selected="true" text="状态栏(S)" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TextArea fx:id="textarea" prefHeight="200.0" prefWidth="200.0" style="overflow-y: scroll;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <ToolBar fx:id="toolbar" layoutX="-1.0" layoutY="380.0" prefHeight="10.0" prefWidth="454.0">
+        <items>
+            <Label fx:id="label1" prefHeight="24.0" prefWidth="137.0" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="9.0" />
+            <Label fx:id="label2" prefHeight="24.0" prefWidth="56.0" />
+            <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="3.0" />
+            <Label fx:id="label3" prefHeight="24.0" prefWidth="93.0" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="1.0" />
+            <Label fx:id="label4" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
